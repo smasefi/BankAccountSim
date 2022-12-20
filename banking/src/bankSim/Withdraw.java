@@ -1,5 +1,5 @@
 package bankSim;
 
-public class Withdraw {
+public class Withdraw extends Account{
 
 }

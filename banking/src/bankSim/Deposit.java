@@ -3,9 +3,9 @@ import bankSim.*;
 
 import java.util.Scanner;
 
-public class Deposit {
+public class Deposit extends Account{
 
-    public static int new_total = 0;
+    public static int new_total = Account.accountAmount;
 
     public static void deposit(){
         System.out.println("How much would you like to deposit");
@@ -13,9 +13,9 @@ public class Deposit {
         int deposit_amount = 0;
         deposit_amount = scanner.nextInt();
 
-        int account_amount = Account.accountAmount;
-
-        new_total = account_amount + deposit_amount;
+        new_total = new_total + deposit_amount;
+        //System.out.println(new_total);
+        setAccountAmount(new_total);
     }
 
 }
