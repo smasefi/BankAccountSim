@@ -26,21 +26,23 @@ public class BankDirectory {
                 // take to the account
                 System.out.println("Account Amount");
                 System.out.println(Account.accountAmount);
+                System.out.println(options);
             }
             if(choice == 2){
                 // take to class that allows withdrawal
-                System.out.println("Withdraw");
+                Withdraw.withdraw();
+                System.out.println(options);
             }
 
             if(choice == 3){
                 // take to class that deposits funds
                 Deposit.deposit();
-                System.out.println("Deposit Funds");
+                System.out.println(options);
             }
 
             if(choice == 4){
                 //logout
-                System.out.println("Logout");
+                System.out.println("You are now logged out of the Mobile Banking System: ");
                 accountStatus = false;
             }
 
