@@ -1,2 +1,3 @@
 # BankAccountSim
-A program that simulates a banking experience
+
+This is my first personal project attempt that is working

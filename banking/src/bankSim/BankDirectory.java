@@ -1,5 +1,6 @@
 package bankSim;
 
+import bankSim.*;
 import java.util.*;
 
 public class BankDirectory {
@@ -24,6 +25,7 @@ public class BankDirectory {
             if(choice == 1){
                 // take to the account
                 System.out.println("Account Amount");
+                System.out.println(Account.accountAmount);
             }
             if(choice == 2){
                 // take to class that allows withdrawal
@@ -32,6 +34,7 @@ public class BankDirectory {
 
             if(choice == 3){
                 // take to class that deposits funds
+                Deposit.deposit();
                 System.out.println("Deposit Funds");
             }
 
