@@ -3,7 +3,7 @@ package bankSim;
 import java.util.Scanner;
 
 public class Withdraw extends Account {
-    public static int new_total = Account.accountAmount;
+    public static int account_total = Account.accountAmount;
 
     public static void withdraw() {
         System.out.println("Enter the amount you would like to withdraw: ");
@@ -12,15 +12,17 @@ public class Withdraw extends Account {
 
         withdraw_amt = scanner.nextInt();
 
-        if(withdraw_amt > new_total){
+        if(withdraw_amt > account_total){
             System.out.println("The amount that you are trying to withdraw exceeds the amount in your account. ");
         }
-        else if (withdraw_amt == new_total){
-            System.out.println("Your account is empty " + "Amount total is: " + new_total);
+        else if (withdraw_amt == account_total){
+            account_total = account_total - withdraw_amt;
+            System.out.println("Your account is empty " + "Amount total is: " + account_total);
+            setAccountAmount(account_total);
         }
         else{
-            new_total = new_total - withdraw_amt;
-            setAccountAmount(new_total);
+            account_total = account_total - withdraw_amt;
+            setAccountAmount(account_total);
         }
     }
 }

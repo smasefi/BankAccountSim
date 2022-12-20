@@ -26,18 +26,18 @@ public class BankDirectory {
                 // take to the account
                 System.out.println("Account Amount");
                 System.out.println(Account.accountAmount);
-                System.out.println(options);
+                System.out.println("\n" + options);
             }
             if(choice == 2){
                 // take to class that allows withdrawal
                 Withdraw.withdraw();
-                System.out.println(options);
+                System.out.println("\n" + options);
             }
 
             if(choice == 3){
                 // take to class that deposits funds
                 Deposit.deposit();
-                System.out.println(options);
+                System.out.println("\n" + options);
             }
 
             if(choice == 4){
